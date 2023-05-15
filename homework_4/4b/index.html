@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4b</title>
+
+    <style>
+        html, body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        table{
+            margin: 10px;
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+
+        thead, th{
+            background-color: #92c3f1;
+            color: #ffffff;
+            height: 40px;
+        }
+
+        td{
+            background-color: #d3eeff;
+            color: black;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col style="width: 200px;" span="1"></col>
+            <col style="width: 100px;" span="4"></col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">Company</th>
+                <th scope="col">Q1</th>
+                <th scope="col">Q2</th>
+                <th scope="col">Q3</th>
+                <th scope="col">Q4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Microsoft</th>
+                <td>20.3</td>
+                <td>30.5</td>
+                <td>23.5</td>
+                <td>40.3</td>
+            </tr>
+            <tr>
+                <th scope="row">Google</th>
+                <td>50.2</td>
+                <td>40.63</td>
+                <td>45.23</td>
+                <td>39.3</td>
+            </tr>
+            <tr>
+                <th scope="row">Apple</th>
+                <td>25.4</td>
+                <td>30.2</td>
+                <td>33.3</td>
+                <td>36.7</td>
+            </tr>
+            <tr>
+                <th scope="row">IBM</th>
+                <td>20.4</td>
+                <td>15.6</td>
+                <td>22.3</td>
+                <td>29.3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

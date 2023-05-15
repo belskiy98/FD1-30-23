@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKS</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .menu {
+            margin-top: 10px;
+        }
+
+        .menu a {
+            color: #008000;
+            border-right: 3px solid #ff0000;
+            padding: 5px 10px 10px 10px;
+        }
+
+        .menu a:last-child {
+            border: none;
+        }
+
+        .menu a:hover {
+            color: #ff0000;
+        }
+
+        .menu-two {
+            margin-top: 30px;
+        }
+
+        .menu-two a {
+            color: #008000;
+            padding-left: 10px;
+        }
+
+        .menu-two a:nth-child(-n+4)::after {
+            content: "";
+            border-right: 3px solid #ff0000;
+            padding-top: 5px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+
+        .menu-two a:hover {
+            color: #ff0000;
+        }
+
+        .menu-three {
+            margin-top: 30px;
+        }
+
+        .menu-three a {
+            color: #008000;
+            padding: 5px 5px 10px 10px;
+        }
+
+        .menu-three a:nth-child(n+2) {
+            border-left: 3px solid #ff0000;
+            padding: 5px 10px 10px 10px;
+        }
+
+        .menu-three a:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <a href="https://github.com/" target="_blank">первая ссылка</a>
+            <a href="https://github.com/" target="_blank">вторая ссылка</a>
+            <a href="https://github.com/" target="_blank">третья ссылка</a>
+            <a href="https://github.com/" target="_blank">четвертая ссылка</a>
+            <a href="https://github.com/" target="_blank">пятая ссылка</a>
+        </div>
+        <div class="menu-two">
+            <a href="https://github.com/" target="_blank">первая ссылка</a>
+            <a href="https://github.com/" target="_blank">вторая ссылка</a>
+            <a href="https://github.com/" target="_blank">третья ссылка</a>
+            <a href="https://github.com/" target="_blank">четвертая ссылка</a>
+            <a href="https://github.com/" target="_blank">пятая ссылка</a>
+        </div>
+        <div class="menu-three">
+            <a href="https://github.com/" target="_blank">первая ссылка</a>
+            <a href="https://github.com/" target="_blank">вторая ссылка</a>
+            <a href="https://github.com/" target="_blank">третья ссылка</a>
+            <a href="https://github.com/" target="_blank">четвертая ссылка</a>
+            <a href="https://github.com/" target="_blank">пятая ссылка</a>
+        </div>
+    </div>
+</body>
+</html>

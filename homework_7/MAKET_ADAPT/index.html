@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>MAKET_ADAPT</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header,
+        footer {
+            background-color: #add8e6;
+        }
+
+        .header__row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+        }
+
+        .header__text {
+            font-size: 34px;
+	        letter-spacing: 0.3px;
+            color: #0d10fd;
+            text-transform: uppercase ;
+        }
+
+        .content {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+        }
+
+        .sport__row {
+            display: flex;
+            gap: 30px;
+        }
+
+        .sport__list {
+            background-color: #f0e68c;
+            width: 300px;
+            padding: 20px 30px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        .sport_hr li:hover {
+            color: #0d10fd;
+        }
+
+        .sport_hr a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        .sport__body {
+            background: url('./img/ball3.png') repeat-y right;
+            background-size: 74px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            padding-right: 30px;
+        }
+
+        .sport__title {
+            text-align: center;
+        }
+
+        .sport__text {
+            text-align: justify;
+            padding-right: 60px;
+        }
+
+        .sport__body img {
+            float: left;
+            width: 400px;
+            height: auto;
+            padding-right: 30px;
+            padding-bottom: 20px;
+        }
+
+        .footer__row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+        }
+
+        .footer__text {
+            font-size: 34px;
+	        letter-spacing: 0.3px;
+            color: #0d10fd;
+            text-transform: uppercase ;
+        }
+
+
+        @media screen and (max-width:900px) {
+            .sport__row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .sport__list {
+                width: auto;
+            }
+
+            .sport__body {
+                padding-left: 30px;
+            }
+        }
+
+        @media screen and (max-width:710px) {
+            .header,
+            .footer {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (max-width:570px) {
+            .sport__body {
+                background: none;
+            } 
+            .sport__body img {
+                width: 200px;
+                height: auto;
+            }
+        }
+
+        @media print {
+            .header,
+            .footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <div class="header__text">Привет участникам соревнований!</div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="sport">
+                <div class="container">
+                    <div class="sport__row">
+                        <div class="sport__list">
+                            <h2>Виды спорта:</h2>
+                            <ul class="sport_hr">
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">конькобежный спорт</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">биатлон</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">футбол</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">стрельба из лука</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">прыжки в длину</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">прыжки в высоту</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">фигурное катание</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">синхронное плавание</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">шахматы</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Сани</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Скелетон</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Сноуборд</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Cофтбол</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Cпортивная гимнастика</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Стрельба из лука</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Стрельба пулевая</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Стрельба стендовая</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Фехтование</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Стрельба из лука</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">Регби</a></li>
+                            </ul>
+                        </div>
+                        <div class="sport__body">
+                            <div class="sport__title">
+                                <h1>Футбол</h1>
+                            </div>
+                            <img src="./img/football.jpg" alt="football" width="200" height="133">
+                            <div class="sport__text">
+                                <p>Футбол (от англ. foot — ступня, ball — мяч) — командный вид спорта, в котором целью является забить мяч в ворота
+                                соперника ногами или другими частями тела (кроме рук) большее количество раз, чем команда соперника. В настоящее время
+                                самый популярный и массовый вид спорта в мире.</p>
+                                
+                                <p>Почему мы выбрали данную тему? Не раз говорилось о том, что занятия спортом – это залог здоровья. Спорт укрепляет
+                                организм, делает нас выносливее. Занятия спортом разнообразны и актуальны круглый год. Спортивные победы не раз
+                                прославляли нашу страну на весь мир. А в 2014 году наша страна была хозяйкой зимних Олимпийских игр. Футбол относится к
+                                тем видам спорта, которыми можно заниматься, начиная с самого раннего детства и вплоть до глубокой старости. Футбол
+                                представляет широкие возможности разнообразной спортивной деятельности на свежем воздухе и при этом вовлекает в работу
+                                почти все системы организма. Футбол является важным средством поддержания и улучшения здоровья.</p>
+
+                                <p>Если мы обратимся к истории футбола, то ритуальные игры с мячом давно были распространены на всех континентах. Древние
+                                кожаные мячи были найдены при раскопках в Англии и Греции. Согласно преданиям античности, первый мяч дала Эросу богиня
+                                Афродита, сказав ему такие слова: «Я дам тебе чудесную игрушку: это шар быстро летучий, иной лучшей забавы ты не
+                                добудешь из рук Гефеста». В зависимости от ритуала мяч мог символизировать и Солнце, и Луну, и Землю, и даже полярное
+                                сияние. В Австралии мячи делали из шкур сумчатых крыс, мочевых пузырей крупных животных, из скрученных волос. Изначально
+                                эта игра была направлена на обеспечение процветания племени. Обряд требовал длительной подготовки, в течение которой
+                                сооружался алтарь, символизирующий центр Земли.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="footer__text">Главное не победа, а участие!</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

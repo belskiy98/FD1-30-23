@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV_FRAME</title>
+
+    <style>
+        html, body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container-background{
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .background-left{
+            background: url('./img/ramka-t&b.png') repeat-y left;
+        }
+
+        .background-right{
+            background: url('./img/ramka-t&b.png') repeat-y right;
+        }
+
+        .background-top{
+            background: url('./img/ramka-l&r.png') repeat-x top;
+        }
+
+        .background-bottom{
+            background: url('./img/ramka-l&r.png') repeat-x bottom;
+        }
+
+        .ramka-lt{
+            background: url('./img/ramka-lt.png') no-repeat left top;
+        }
+
+        .ramka-lb{
+            background: url('./img/ramka-rb.png') no-repeat left bottom;
+        }
+
+        .ramka-rt{
+            background: url('./img/ramka-rt.png') no-repeat right top;
+        }
+
+        .ramka-rb{
+            background: url('./img/ramka-lb.png') no-repeat right bottom;
+        }
+
+        .background-content{
+            padding: 60px;
+            font-family: sans-serif;
+            font-size: 26px;
+            white-space: normal;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-background">
+        <div class="background-left">
+            <div class="background-right">
+                <div class="background-top">
+                    <div class="background-bottom">
+                        <div class="ramka-lt">
+                            <div class="ramka-lb">
+                                <div class="ramka-rt">
+                                    <div class="ramka-rb">
+                                        <div class="background-content">
+                                            <p>Бериллий — элемент главной подгруппы второй группы, второго периода периодической системы химических элементов Д. И.
+                                                Менделеева, с атомным номером 4. Обозначается символом Be (лат. Beryllium). Высокотоксичный элемент. Простое
+                                                вещество бериллий — относительно твёрдый металл светло-серого цвета.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

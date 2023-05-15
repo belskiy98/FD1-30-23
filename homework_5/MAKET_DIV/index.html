@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKET_DIV</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            max-width: 750px;
+            margin: 0 auto;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        .header-wrap,
+        .footer-wrap {
+            background-color: #add8e6;
+            color: #0d10fd;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .header-wrap {
+            height: 46px;
+        }
+
+        .header-wrap h2 {
+            padding-top: 10px;
+        }
+
+        .sidebar-left {
+            background-color: #f0e68c;
+            width: 200px;
+            float: left;
+        }
+
+        .sidebar-left-menu {
+            padding: 30px 40px
+        }
+
+        .sidebar-left-menu a {
+            color: #0441ec;
+        }
+
+        .sidebar-left-menu p {
+            padding-bottom: 30px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .main-content {
+            background: url('./img/ball3.png') repeat-y right;
+            background-size: 40px;
+            max-width: 550px;
+            margin-left: 200px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .main-content h2{
+            padding-top: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .main-content img {
+            float: left;
+            padding: 0 20px 15px 0;
+        }
+
+        .main-content p:last-child {
+            padding-top: 20px;
+        }
+
+        .footer-wrap {
+            height: 56px;
+            clear: both;
+        }
+
+        .footer-wrap h2 {
+            padding-top: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header-wrap">
+        <h2>Привет участникам соревнований!</h2>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="sidebar-left">
+                <ul class="sidebar-left-menu"><p>Виды спорта:</p>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">конькобежный спорт</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">биатлон</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">футбол</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">стрельба из лука</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">прыжки в длину</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">прыжки в высоту</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">фигурное катание</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">синхронное плавание</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">шахматы</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82" title="wiki" target="_blank">шашки</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2>Футбол</h2>
+                <img src="./img/football.jpg" alt="football">
+                <p>Футбол — командный вид спорта, в котором целью является забить мяч в ворота соперника ногами или другими частями тела
+                    (кроме рук) большее количество раз, чем команда соперника.
+                </p>
+                <p>Есть 17 официальных правил игры, каждое из которых содержит список оговорок и руководящих принципов. Эти правила
+                    предназначены для применения на всех уровнях футбола, хотя есть некоторые изменения для таких групп, как юниоры,
+                    взрослые, женщины и люди с ограниченными физическими возможностями. Законы очень часто формулировались в общих
+                    чертах, которые позволяют упростить их применения в зависимости от характера игры.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-wrap">
+        <h2>Главное не победа, а участие!</h2>
+    </footer>
+</body>
+</html>

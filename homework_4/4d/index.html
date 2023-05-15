@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4d</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        html, body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .main-page-content{
+            max-width: 602px;
+            margin: 0 auto;
+        }
+
+        .content-hr{
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 30px;
+        }
+
+        .content-hr a{
+            color: #107ef3;;
+        }
+
+        .button-content-hr{
+            border: 1px solid #858585;
+            border-radius: 3px;
+            display: inline-block;
+            height: 30px;
+            width: 130px;
+            padding-left: 3px;
+            padding-right: 3px;
+            line-height: 30px;
+            text-decoration: underline;
+        }
+
+        .button-content-hr:hover{
+            background-color: #858585;
+            color: white;
+            text-decoration: none
+        }
+
+        table{
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        td, th{
+            border: 1px solid #858585;
+            padding: 0.5em 0.75em;
+            vertical-align: middle;
+        }
+
+        .main-page-content img{
+            margin-top: 20px;
+            border: 1px solid #858585;
+            border-radius: 3px;
+        }
+
+        .content-table-img{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main class="main-page-content">
+        <h1>HTML table basics</h1>
+        <div class="section-content">
+            <ul class="content-hr">
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables" target="_blank">
+                        <span class="button-content-hr"> Overview: Tables</span>
+                    </a>
+                </li>
+            </ul>
+
+            <p>This article gets you started with HTML tables, covering the very basics such as rows, cells, headings, making cells
+                span multiple columns and rows, and how to group together all the cells in a column for styling purposes.</p>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <th scope="row">Prerequisites:</th>
+                        <td>The basics of HTML see (<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+                                target="_blank" style="color:#107ef3">Introduction
+                                to HTML</a>).
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Objective:</th>
+                        <td>To gain basic familiarity with HTML tables.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2 style="margin-top: 30px;">What is a table?</h2>
+        <div class="content-next">
+            <p>A table is a structured set of data made up of rows and columns <strong>(tabular data).</strong> A table allows you to quickly and
+                easily look up values that indicate some kind of connection between different types of data, for example a person
+                and their age, or a day of the week, or the timetable for a local swimming pool.</p>
+
+            <div class="content-table-img">
+                <img src="./img/numbers-table.png" width="491" height="256" alt="numbers-table">
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>
