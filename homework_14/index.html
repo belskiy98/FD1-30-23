@@ -14,28 +14,30 @@
         let userAge = prompt("Сколько Вам лет?");
         let userGender = confirm("Ваш пол мужской?");
 
-        alert(`ваше ФИО: ${userLastName} ${userSecondName} ${usetFirstName}`);
-        alert(`ваш возраст в годах: ${userAge}`);
+        let message = `ваше ФИО: ${userLastName} ${userSecondName} ${usetFirstName}`;
+        message += `\nваш возраст в годах: ${userAge}`;
 
         let yearInDay = 365;
         let userAgeInDay = parseInt(userAge) * yearInDay;
-        alert(`ваш возраст в днях: ${userAgeInDay}`);
+        message += `\nваш возраст в днях: ${userAgeInDay}`;
 
         let ageFive = 5;
         let userAgeFeature = parseInt(userAge) + ageFive;
-        alert(`через 5 лет вам будет: ${userAgeFeature}`);
+        message += `\nчерез 5 лет вам будет: ${userAgeFeature}`;
 
         if(userGender) {
-            alert("ваш пол: мужской");
+            message += `\nваш пол мужской`;
         } else {
-            alert("ваш пол: женский");
+            message += `\nваш пол женский`;
         }
 
         if(userAge < 65) {
-            alert("вы на пенсии: нет");
+            message += `\nвы на пенсии: нет`;
         } else {
-            alert("вы на пенсии: да");
+            message += `\nвы на пенсии: да`;
         }
+
+        alert(message);
 
     </script>
 </body>
