@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_todo</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .todo {
+            max-width: 600px;
+            padding: 50px;
+            margin: 0 auto;
+            border: 1px solid #aeaaaa;
+        }
+
+        .todo__controls input {
+			padding: 10px 20px;
+			border: 1px solid #cecece;
+            outline: none;
+            border-radius: 5px;
+            transition: all 300ms ease;
+        }
+
+        .todo__controls input:focus {
+            border: 1px solid rgb(46, 107, 229);
+        }
+
+        .todo__controls input::placeholder {
+            transition: all 300ms ease;
+            color: #a4a4a4;
+        }
+
+        .todo__controls input:focus::placeholder { 
+            font-size: 12px;
+            transform: translateY(-12px);
+        }
+
+        .todo__btn {
+            background-color: #706e6e;
+            color: white;
+            border: none;
+            padding: 10px 15px 10px 15px;
+            transition: all 200ms ease;
+        }
+
+        .todo__btn:hover {
+            cursor: pointer;
+        }
+
+        .todo__btn:active {
+            border: 1px solid #cecece;
+            background-color: white;
+            color: #a4a4a4;
+        }
+
+        ul li {
+            list-style-type: none;
+            padding-top: 10px;
+        }
+
+        ul button {
+            margin-top: 10px;
+            background-color: #706e6e;
+            color: white;
+            border: none;
+            padding: 10px 15px 10px 15px;
+            transition: all 200ms ease;
+        }
+
+        ul button:hover {
+            cursor: pointer;
+        }
+
+        ul button:active {
+            border: 1px solid #cecece;
+            background-color: white;
+            color: #a4a4a4;
+        }
+
+    </style>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function(){
+            let btn = document.querySelector(".todo__controls button");
+            btn.addEventListener("click", function(){
+                let input = document.querySelector(".todo__controls input");
+                let inputValue = input.value.trim();
+
+                if(!inputValue) {
+                    input.focus();
+                    return;
+                }
+
+                input.value = "";
+
+                let newItem = document.createElement("li");
+                newItem.textContent = inputValue;
+
+                let ul = document.querySelector(".todo__list ul");
+                ul.appendChild(newItem);   
+
+                let button = document.createElement("button");
+                button.textContent = "Удалить";
+                ul.appendChild(button);
+
+                button.addEventListener("click", function(){
+                    if(confirm(`Удалить ${inputValue}?`)) {
+                        newItem.remove();
+                        button.remove();
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="todo">
+        <div class="todo__controls">
+            <input type="text" name="name" placeholder="Введите название дела">
+            <button class="todo__btn">Добавить</button>
+        </div>
+        <div class="todo__list">
+            <ul>
+                
+            </ul>
+
+            
+        </div>
+    </div>
+</body>
+</html>
