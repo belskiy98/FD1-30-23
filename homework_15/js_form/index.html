@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_form</title>
+    <style>
+        html, body {
+            margin: 10px 10px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .labeled-input-container {
+			position: relative;
+            color: #4d4b4b;
+            padding-top: 15px;
+		}
+		.labeled-input-container input {
+			padding: 10px 20px;
+			border: 1px solid #cecece;
+            outline: none;
+            border-radius: 5px;
+            transition: all 200ms ease;
+		}
+
+        .labeled-input-container input::placeholder {
+            transition: all 400ms ease;
+            color: #a4a4a4;
+   }
+
+        .labeled-input-container input:focus {
+            border: 1px solid rgb(46, 107, 229);
+   }
+
+        .labeled-input-container input:focus::placeholder { 
+            font-size: 12px;
+            transform: translateY(-12px);
+   }
+
+        .input-radio {
+            padding-top: 15px;
+            color: #4d4b4b;
+        }
+
+        .submit-btn {
+            padding-top: 15px;
+        }
+
+        .submit-btn input {
+            background-color: #4d4b4b;
+            border: none;
+            color: white;
+            padding: 10px 15px 10px 15px;
+            transition: all 300ms ease;
+        }
+
+        .submit-btn input:hover {
+            border: 1px solid #cecece;
+            background-color: white;
+            color: #4d4b4b;;
+        }
+
+        .submit-btn input:active {
+            transform: scale(95%);
+        }
+    </style>
+    
+    <script>
+        window.addEventListener("DOMContentLoaded", function(){
+            document.querySelector(".survey_form").addEventListener("submit", function(event){
+                event.preventDefault();
+                let form = document.querySelector(".survey_form")
+
+                let lastname = form.querySelector("input[name='lastname']").value;
+                let fname = form.querySelector("input[name='fname']").value;
+                let pname = form.querySelector("input[name='pname']").value;
+                let age = form.querySelector("input[name='age']").value; 
+
+                let gender;
+                let selectRadio = form.querySelector("input[name='gender']:checked");
+                if(selectRadio){
+                    gender = selectRadio.value;
+                }
+
+                let genderLabel;
+                if(gender === "male"){
+                    genderLabel = "мужской"
+                } else {
+                    genderLabel = "женский";
+                }
+
+                alert(`Ваше ФИО: ${lastname} ${fname} ${pname}
+ваш возраст: ${age}
+ваш возраст в днях: ${age * 365}
+через 5 лет вам будет ${+age + 5}
+Ваш пол: ${genderLabel}
+вы на пенсии?: ${age >= 65 ? "да" : "нет"}
+                `)
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Опрос</h1>
+    <form class="survey_form">
+        <div class="labeled-input-container">
+            <input name="lastname" id="labeled-input" class="labeled-input" placeholder="Фамилия">
+            <label for="labeled-input"></label>
+        </div>
+        <div class="labeled-input-container">
+            <input name="fname" id="labeled-input" class="labeled-input" placeholder="Имя">
+            <label for="labeled-input"></label>
+        </div>
+        <div class="labeled-input-container">
+            <input name="pname" id="labeled-input" class="labeled-input" placeholder="Отчество">
+            <label for="labeled-input"></label>
+        </div>
+        <div class="labeled-input-container">
+            <input type="number" name="age" id="labeled-input" class="labeled-input" placeholder="Возраст">
+            <label for="labeled-input"></label>
+        </div>
+        <div class="input-radio">
+            Пол:
+            <label>Мужской<input type="radio" name="gender" value="male"></label>
+            <label>Женский<input type="radio" name="gender" value="female"></label>
+        </div>
+        <div class="submit-btn">
+            <input type="submit" value="Сохранить">
+        </div>
+    </form>
+</body>
+</html>
