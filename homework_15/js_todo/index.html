@@ -11,6 +11,8 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            margin: 0;
+            padding: 0;
         }
 
         .todo {
@@ -60,17 +62,26 @@
             color: #a4a4a4;
         }
 
+        ul {
+            padding-left: 10px;
+            margin: 0;
+        }
+
         ul li {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
             list-style-type: none;
-            padding-top: 10px;
+            padding-top: 20px;
         }
 
         ul button {
-            margin-top: 10px;
             background-color: #706e6e;
             color: white;
             border: none;
-            padding: 10px 15px 10px 15px;
+            padding: 10px 19px 10px 19px;
             transition: all 200ms ease;
         }
 
@@ -103,12 +114,12 @@
                 let newItem = document.createElement("li");
                 newItem.textContent = inputValue;
 
-                let ul = document.querySelector(".todo__list ul");
-                ul.appendChild(newItem);   
-
                 let button = document.createElement("button");
                 button.textContent = "Удалить";
-                ul.appendChild(button);
+                newItem.appendChild(button);
+
+                let ul = document.querySelector(".todo__list ul");
+                ul.appendChild(newItem);   
 
                 button.addEventListener("click", function(){
                     if(confirm(`Удалить ${inputValue}?`)) {
@@ -130,8 +141,6 @@
             <ul>
                 
             </ul>
-
-            
         </div>
     </div>
 </body>
